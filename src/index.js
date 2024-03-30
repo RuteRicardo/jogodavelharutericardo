@@ -137,6 +137,13 @@ class Game extends React.Component {
         </li>
       );
     });
+    
+   let celebration = null;
+    if (winner) {
+      //celebration = <div className="celebration">🎉 Parabéns {winner}! 🎉</div>;
+    } else if (this.state.stepNumber === 9) {
+      celebration = <div className="celebration">Empate!</div>;
+    }
 
    
 
@@ -163,7 +170,7 @@ class Game extends React.Component {
           {newGameButton}
           <ol>{moves}</ol>
         </div>
-        
+{celebration}
       </div>
     );
   }
