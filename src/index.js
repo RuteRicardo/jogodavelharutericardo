@@ -138,9 +138,7 @@ class Game extends React.Component {
       );
     });
 
-    if(this.state.stepNumber===9 && !winner){
-      status='Empate'
-    }
+   
 
     let newGameButton = null;
     if (winner || this.state.stepNumber === 9) {
